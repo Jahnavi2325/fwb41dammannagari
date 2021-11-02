@@ -5,5 +5,14 @@ block content
   p Welcome to pug assignment
   
   
-  input(type ="button", class="btn btn-primary btn-sm" value = "Press Me")
+  input(type ="button", class="btn btn-primary btn-sm" onclick='update()' value = "Press Me")
+  div#target Display
+
+  script.
+    var client_count = 0
+    function update(){
+      client_count++;
+      console.log(client_count)
+      document.getElementById("target").innerHTML = "Value now " +client_count;
+    }
   
